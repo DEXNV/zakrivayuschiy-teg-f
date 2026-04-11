@@ -7,7 +7,7 @@
   --font-accent-size-title: clamp(49px, 2.2vw + 35.75px, 65px);
   --font-accent-size-subtitle: clamp(14px, 0.845vw + 10.831px, 23px);
 
-  --block-width: clamp(375px, 50vw, 700px);
+  --section-width: clamp(375px, 50vw, 700px);
   --padding-heading: clamp(120px, 0.751vw + 119.184px, 130px) clamp(16px, 10vw - 21.5px, 122.5px);
 
   --background-gradient:

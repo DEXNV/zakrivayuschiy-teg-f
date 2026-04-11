@@ -9,6 +9,13 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -25,12 +32,12 @@
   align-items: center;
 }
 
-.box_style {
-  width: var(--box-width);
+.section_style {
+  width: var(--section-width);
   border: 2px solid black;
 }
 
-.header__box {
+.header {
   box-sizing: border-box;
 
   display: flex;
@@ -58,4 +65,40 @@
   text-transform: uppercase;
   line-height: 100%;
   text-wrap: nowrap;
+}
+
+.main__box {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.main__title {
+
+}
+
+.main__img {
+
+}
+
+.main__text {
+  max-width: 100%;
+}
+
+.card__like-button {
+
+}
+
+.like-icon {
+
+}
+
+.card__icon-button {
+
+}
+
+.button__text {
+  
 }
