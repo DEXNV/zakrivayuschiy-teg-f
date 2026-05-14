@@ -34,7 +34,6 @@ button {
 
 .section_style {
   width: var(--section-width);
-  border: 2px solid black;
 }
 
 .header {
@@ -45,6 +44,7 @@ button {
   align-items: center;
 
   background-color: white;
+  border: 2px solid black;
 
   padding: var(--padding-heading);
   margin: 100px 0;
@@ -67,28 +67,75 @@ button {
   text-wrap: nowrap;
 }
 
-.main__box {
+.main {
   display: flex;
   flex-direction: column;
+  gap: 50px;
+  margin-bottom: 100px;
+}
 
+.main__box {
+  display: flex;
+  position: relative;
+  flex-direction: column;
   box-sizing: border-box;
   max-width: 100%;
+  background-color: white;
+  border: 2px solid black;
 }
 
-.main__title {
-
+.card__title {
+  font-variation-settings: 'wght' var(--font-primary-weight-heading);
+  margin: 4px 10px;
 }
 
-.main__img {
-
+.card__img-box {
+  position: relative;
+  box-sizing: border-box;
 }
 
-.main__text {
+.card__img {
   max-width: 100%;
+}
+
+.card__img-label {
+  position: absolute;
+  margin: 25px;
+  top: 0px;
+  right: 0px;
+
+  mix-blend-mode: hard-light;
+  opacity: .5;
+  -webkit-text-stroke: 1px var(--font-border-label);
+  font-family: var(--font-accent);
+  font-size: var(--font-img-label-size-base);
+}
+
+.card__text {
+  max-width: 100%;
+}
+
+.card__title-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 25px;
+}
+
+.card__like-section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .card__like-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 38px;
 
+  border: 2px solid black;
 }
 
 .like-icon {
@@ -96,9 +143,41 @@ button {
 }
 
 .card__icon-button {
-
+  display: flex;
 }
 
 .button__text {
-  
+  font-family: var(--font-accent);
+  font-weight: var(--font-button-weight-base);
+  font-size: var(--font-button-size-base);
 }
+
+.main__save-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: white;
+  border: 2px solid black;
+
+  padding: 17px 20px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .main__save-button {
+    flex-direction: row;
+  }
+}
+
+#img2 {
+  filter: brightness(200%);
+}
+
+@supports (mix-blend-mode: hard-light) {
+  span {
+    mix-blend-mode: hard-light;
+  }
+} 
