@@ -45,7 +45,7 @@
                   </defs>
                 </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -79,7 +79,7 @@
                   </defs>
                 </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -113,7 +113,7 @@
                   </defs>
                 </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -147,7 +147,7 @@
                   </defs>
                 </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -181,7 +181,7 @@
                   </defs>
                 </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -215,7 +215,7 @@
                   </defs>
                 </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -249,7 +249,7 @@
                   </defs>
                 </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -283,17 +283,32 @@
                   </defs>
                 </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </div>
       </div>
-      <button class="main__save-button">
-        <img src="./images/floppy.png" alt="Floppy (save on memory)">
+      <button class="main__save-button button "
+        type="button"
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id">
+        <img class="main__save-button_img" src="./images/floppy.png" alt="Floppy (save on memory)">
         <span class="button__text">Сохранить на пямять</span>
       </button>
     </main>
+    <dialog class="dialog__save" id="dialog-id">
+      <div class="dialog__header">
+        <img class="dialog__icon_floppy" src="./images/floppy.png" alt="Floppy (save on memory)">
+        <span class="dialog__header_title">Вставьте дискету, чтобы продолжить</span>
+      </div>
+      <button
+        class="dialog__btn_save button"
+        type="button"
+        onclick="window['dialog-id'].close();">
+        <span class="button__text">OK</span>
+      </button>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
