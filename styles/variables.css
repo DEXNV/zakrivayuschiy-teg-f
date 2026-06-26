@@ -9,6 +9,8 @@
   --font-accent-size-subtitle: clamp(14px, 0.845vw + 10.831px, 23px);
   --font-button-size-base: 14px;
   --font-img-label-size-base: 14px;
+  --font-card-text-size: 18px;
+  --font-card-line-height: 21px;
 
   --font-border-label: white;
 

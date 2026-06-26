@@ -113,6 +113,8 @@ button {
 
 .card__text {
   max-width: 100%;
+  font-size: var(--font-card-text-size);
+  line-height: var(--font-card-line-height);
 }
 
 .card__title-box {
@@ -143,6 +145,10 @@ button {
   z-index: 2;
   mix-blend-mode: difference;
   color: white;
+}
+
+.button__text_uppercase {
+  text-transform: uppercase;
 }
 
 .card__icon-button:focus-visible {
@@ -330,22 +336,6 @@ button {
   width: 100%;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
-}
-
-@keyframes heart-sparks {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
-}
-
-@keyframes heart-like {
-  from {
-    transform: scale(1);
-  } to {
-    transform: scale(1.25);
-  }
 }
 
 @media (min-width: 768px) {
