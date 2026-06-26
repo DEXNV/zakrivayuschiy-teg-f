@@ -15,6 +15,11 @@
   --section-width: clamp(375px, 50vw, 700px);
   --padding-heading: clamp(120px, 0.751vw + 119.184px, 130px) clamp(16px, 10vw - 21.5px, 122.5px);
 
+  --heart-contour: black;
+  --heart-red-fill-color: red;
+  --heart-black-fill-color: black;
+
+
   --background-gradient:
     repeating-linear-gradient(
       90deg,

@@ -126,6 +126,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: end;
+  gap: 6px;
 }
 
 .card__like-button {
@@ -144,14 +145,79 @@ button {
   color: white;
 }
 
+.card__icon-button:focus-visible {
+  outline: 2px solid black ;
+}
 
-.like-icon {
+.like-icon .heart .core,.main-body {
+  fill: transparent;
+}
 
+.like-icon .heart .core {
+  transition: fill .3s linear .03s;
+}
+
+.like-icon .heart .main-body {
+  transition: fill .3s linear;
+}
+
+.like-icon .heart .contour {
+  fill: var(--heart-contour);
+  transition: fill .1s linear;
+}
+
+.like-icon .sparks {
+  fill: var(--heart-red-fill-color);
+  opacity: 0;
+}
+
+.like-icon:hover .heart .core {
+  transition: fill .3s linear;
+  fill: var(--heart-black-fill-color);
+}
+
+.like-icon:hover .heart .main-body {
+  transition: fill .3s linear .05s;
+  fill: var(--heart-black-fill-color);
+}
+
+.like-icon:active .heart .core {
+  transition: fill .3s linear;
+  fill: var(--heart-red-fill-color);
+}
+
+.like-icon:active .heart .main-body {
+  transition: fill .3s linear .05s;
+  fill: var(--heart-red-fill-color);
+}
+
+.like-icon.is-liked {
+  animation: heart-like .3s ease-in .1s;
+}
+
+.like-icon.is-liked .sparks{
+  animation: heart-sparks .3s ease-in .3s;
+}
+
+.like-icon.is-liked .heart .main-body {
+  transition: fill .3s linear;
+  fill: var(--heart-red-fill-color);
+}
+
+.like-icon.is-liked .heart .core {
+  transition: fill .3s linear .05s;
+  fill: var(--heart-red-fill-color);
+}
+
+.like-icon.is-liked .heart .contour {
+  transition: fill .3s linear .06s;
+  fill: var(--heart-red-fill-color);
 }
 
 .card__icon-button {
   display: flex;
   outline: none;
+  box-sizing: border-box
 }
 
 .button {
@@ -174,7 +240,7 @@ button {
   z-index: 1;
 }
 
-.button:focus {
+.button:focus-visible {
   box-shadow: 2px 2px 0px 0px black;
 }
 
@@ -245,7 +311,7 @@ button {
   font-size: var(--font-button-size-base);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 
 .dialog__header_title {
@@ -266,9 +332,30 @@ button {
   padding-bottom: 12.5px;
 }
 
+@keyframes heart-sparks {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes heart-like {
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(1.25);
+  }
+}
+
 @media (min-width: 768px) {
   .main__save-button {
     flex-direction: row;
+  }
+
+  .main__save-button_img {
+    width: 21px;
+    height: 21px;
   }
 
   .dialog__save {
@@ -279,6 +366,30 @@ button {
 
 #img2 {
   filter: brightness(200%);
+}
+
+#img3 {
+  filter: brightness(30%) contrast(130%) saturate(50%);
+}
+
+#img4 {
+  filter: blur(1px) brightness(110%) contrast(90%);
+}
+
+#img5 {
+  filter: grayscale(70%) sepia(30%) brightness(90%) contrast(120%);
+}
+
+#img6 {
+  filter: sepia(60%) brightness(120%) saturate(150%) hue-rotate(-10deg);
+}
+
+#img7 {
+  filter: invert(100%) brightness(120%);
+}
+
+#img8 {
+  filter: brightness(150%) saturate(200%) hue-rotate(180deg) contrast(130%);
 }
 
 @supports (mix-blend-mode: hard-light) {
